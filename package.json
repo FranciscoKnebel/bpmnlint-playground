@@ -1,31 +1,49 @@
 {
   "name": "bpmnlint-playground",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
   "description": "A bpmnlint playground",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base ./public --open-page index.html?linting=1",
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --open-page index.html?linting=1",
     "lint": "bpmnlint diagrams/*",
-    "start": "npm run dev"
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "author": {
-    "name": "Nico Rehwaldt",
-    "url": "https://github.com/nikku"
+    "name": "Francisco Knebel",
+    "url": "https://github.com/FranciscoKnebel"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "bpmn-js": "^2.5.2",
     "bpmn-js-bpmnlint": "^0.10.0",
     "bpmnlint": "^5.0.0",
     "bpmnlint-loader": "^0.1.3",
-    "bpmnlint-plugin-playground": "file:./plugin",
-    "copy-webpack-plugin": "^4.5.4",
+    "bpmnlint-plugin-playground": "file:./src/plugin",
     "downloadjs": "^1.4.7",
-    "file-drops": "^0.2.0",
+    "file-drops": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.0-beta.6",
+    "copy-webpack-plugin": "^4.5.4",
+    "css-loader": "^1.0.1",
+    "cssnano": "^4.1.7",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "raw-loader": "^0.5.1",
-    "webpack": "^4.22.0",
+    "regenerator-runtime": "^0.12.1",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.1.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.10"
   }
 }
