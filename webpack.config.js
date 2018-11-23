@@ -16,11 +16,10 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      // new terserJsPlugin({
-      //   cache: true,
-      //   parallel: true,
-      //   sourceMap: true
-      // }),
+      new terserJsPlugin({
+        cache: true,
+        parallel: true
+      }),
       new OptimizeCSSAssetsPlugin({
         assetNameRegExp: /\.css$/,
         cssProcessor: cssnano,

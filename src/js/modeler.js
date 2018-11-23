@@ -7,7 +7,6 @@ import {
   setUrlParam
 } from './helpers';
 
-let i = 0;
 const STORAGE_KEY = 'diagramXML';
 export class BPMN {
   constructor({
